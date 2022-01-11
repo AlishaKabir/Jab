@@ -122,7 +122,7 @@
                       <th >Age</th>
                       
                       <th >Email</th>
-                      <th >Approval</th>
+                      <th data-href="#" >Approval</th>
                     
                   </thead>
                   <tbody id="tb1"></tbody>
@@ -137,6 +137,7 @@
       </div>
       <script type="module">
           var ser=0;
+          var x='          <div class="container text-center " ><button type="button" class="btn btn-success" style="background-color: lime;"><a href="#">Approve</a></button></div>';
           var tb=document.getElementById("tb1");
           function Additem(name, vaccine,BirthCertificateNo,Age,email ){
 
@@ -156,7 +157,7 @@
             td4.innerHTML=Age;
             td5.innerHTML=BirthCertificateNo;
             td6.innerHTML=email;
-           // td7.innerHTML=<button id="btn" name="btn">Button</button>;
+            td7.innerHTML=x;
 
             trow.appendChild(td1);
             trow.appendChild(td2);
@@ -164,7 +165,7 @@
             trow.appendChild(td4);
             trow.appendChild(td5);
             trow.appendChild(td6);
-            //trow.appendChild(td7);
+            trow.appendChild(td7);
 
             tb.appendChild(trow);
           }
