@@ -137,7 +137,7 @@
       </div>
       <script type="module">
           var ser=0;
-          var x='<div class="container text-center"><button type="button" id="bt" class="btn btn-success" style="background-color: lime;"><a href="#">Approve</a></button></div>';
+          var x='<div class="container text-center"><button type="button" id="bt" class="btn btn-success" onclick="myFunction()" style="background-color: lime;"><a href="#">Approve</a></button></div>';
           var tb=document.getElementById("tb1");
           function Additem(name, vaccine,BirthCertificateNo,Age,email ){
 
@@ -216,6 +216,23 @@ async function getdataonce(){
   AddAll(users);
 } 
 window.onload=getdataonce;
+
+       </script>
+       <script>
+
+function myFunction() {
+  
+  alert("Vaccination time slot sent to Applicant via mail");
+  const btn = document.getElementById("bt");
+
+    if(btn.innerText === "Approve"){
+        btn.innerText = "Approved";
+    }else{
+        btn.innerText= "Approve";
+    }
+
+  
+}
 
        </script>
     </section>
